@@ -1,37 +1,35 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "WarriorBaseCharacter.h"
-
+#include "AbilitySystem/WarriorAbilitySystemComponent.h"
+#include "AbilitySystem/WarriorAttributeSet.h"
 // Sets default values
+
 AWarriorBaseCharacter::AWarriorBaseCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = false;
 
 	GetMesh()->bReceivesDecals = false;
 
+	WarriorAbilitySystemComponent = CreateDefaultSubobject<UWarriorAbilitySystemComponent>(TEXT("WarriorAbilitySystem"));
+
+	WarriorAttributeSet = CreateDefaultSubobject<UWarriorAttributeSet>(TEXT("WarriorAttributeSet"));
 }
 
-// Called when the game starts or when spawned
-void AWarriorBaseCharacter::BeginPlay()
+UAbilitySystemComponent *AWarriorBaseCharacter::GetAbilitySystemComponent() const
 {
-	Super::BeginPlay();
-	
+	return GetWarriorAbilitySystemComponent();
 }
 
-// Called every frame
-void AWarriorBaseCharacter::Tick(float DeltaTime)
+void AWarriorBaseCharacter::PossessedBy(AController *NewController)
 {
-	Super::Tick(DeltaTime);
+	Super::PossessedBy(NewController);
 
+	if (WarriorAbilitySystemComponent)
+	{
+		WarriorAbilitySystemComponent->InitAbilityActorInfo(this, this);
+		ensureMsgf(!CharacterStartUpData.IsNull(),TEXT("Forgot to assign start up data to %s"),*GetName());
+	}
 }
-
-// Called to bind functionality to input
-void AWarriorBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-

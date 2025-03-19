@@ -10,6 +10,8 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "Components/Input/WarriorInputComponent.h"
 #include "WarriorGameplayTags.h"
+#include "AbilitySystem/WarriorAbilitySystemComponent.h"
+#include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -35,6 +37,20 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
     GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f);
     GetCharacterMovement()->MaxWalkSpeed = 400.0f;
     GetCharacterMovement()->BrakingDecelerationWalking = 2000.0f;
+}
+
+void AWarriorHeroCharacter::PossessedBy(AController* NewController)
+{
+    Super::PossessedBy(NewController);
+
+    if(!CharacterStartUpData.IsNull())
+    {
+        if(UDataAsset_StartUpDataBase* LoadedData =CharacterStartUpData.LoadSynchronous())
+        {
+            LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent);
+        }
+    }
+    
 }
 
 void AWarriorHeroCharacter::SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent)
