@@ -30,7 +30,7 @@
 					"Warrior",
 					"Mac",
 					"Debug",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -47,7 +47,7 @@
 					"Warrior",
 					"Mac",
 					"Debug",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -67,7 +67,7 @@
 					"Warrior",
 					"Mac",
 					"Debug",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -85,7 +85,7 @@
 					"Warrior",
 					"Mac",
 					"DebugGame",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -102,7 +102,7 @@
 					"Warrior",
 					"Mac",
 					"DebugGame",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -122,7 +122,7 @@
 					"Warrior",
 					"Mac",
 					"DebugGame",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -140,7 +140,7 @@
 					"Warrior",
 					"Mac",
 					"Development",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -157,7 +157,7 @@
 					"Warrior",
 					"Mac",
 					"Development",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -177,7 +177,7 @@
 					"Warrior",
 					"Mac",
 					"Development",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -195,7 +195,7 @@
 					"Warrior",
 					"Mac",
 					"Test",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -212,7 +212,7 @@
 					"Warrior",
 					"Mac",
 					"Test",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -232,7 +232,7 @@
 					"Warrior",
 					"Mac",
 					"Test",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -250,7 +250,7 @@
 					"Warrior",
 					"Mac",
 					"Shipping",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -267,7 +267,7 @@
 					"Warrior",
 					"Mac",
 					"Shipping",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -287,7 +287,7 @@
 					"Warrior",
 					"Mac",
 					"Shipping",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -305,7 +305,7 @@
 					"WarriorEditor",
 					"Mac",
 					"Debug",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -322,7 +322,7 @@
 					"WarriorEditor",
 					"Mac",
 					"Debug",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -342,7 +342,7 @@
 					"WarriorEditor",
 					"Mac",
 					"Debug",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -360,7 +360,7 @@
 					"WarriorEditor",
 					"Mac",
 					"DebugGame",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -377,7 +377,7 @@
 					"WarriorEditor",
 					"Mac",
 					"DebugGame",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -397,7 +397,7 @@
 					"WarriorEditor",
 					"Mac",
 					"DebugGame",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -415,7 +415,7 @@
 					"WarriorEditor",
 					"Mac",
 					"Development",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -432,7 +432,7 @@
 					"WarriorEditor",
 					"Mac",
 					"Development",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex"
 				],
 				"problemMatcher": "$msCompile",
@@ -452,7 +452,7 @@
 					"WarriorEditor",
 					"Mac",
 					"Development",
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-waitmutex",
 					"-clean"
 				],
@@ -470,7 +470,7 @@
 			{
 				"name": "Launch Warrior (Debug)",
 				"request": "launch",
-				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
 				"preLaunchTask": "Warrior Mac Debug Build",
 				"args": [
 				],
@@ -480,7 +480,7 @@
 			{
 				"name": "Launch Warrior (DebugGame)",
 				"request": "launch",
-				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
 				"preLaunchTask": "Warrior Mac DebugGame Build",
 				"args": [
 				],
@@ -490,7 +490,7 @@
 			{
 				"name": "Launch Warrior (Development)",
 				"request": "launch",
-				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
 				"preLaunchTask": "Warrior Mac Development Build",
 				"args": [
 				],
@@ -500,7 +500,7 @@
 			{
 				"name": "Launch Warrior (Test)",
 				"request": "launch",
-				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
 				"preLaunchTask": "Warrior Mac Test Build",
 				"args": [
 				],
@@ -510,7 +510,7 @@
 			{
 				"name": "Launch Warrior (Shipping)",
 				"request": "launch",
-				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"program": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
 				"preLaunchTask": "Warrior Mac Shipping Build",
 				"args": [
 				],
@@ -523,7 +523,7 @@
 				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
 				"preLaunchTask": "WarriorEditor Mac Debug Build",
 				"args": [
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject"
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject"
 				],
 				"cwd": "/Users/Shared/Epic Games/UE_5.4",
 				"type": "lldb"
@@ -534,7 +534,7 @@
 				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
 				"preLaunchTask": "WarriorEditor Mac DebugGame Build",
 				"args": [
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject"
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject"
 				],
 				"cwd": "/Users/Shared/Epic Games/UE_5.4",
 				"type": "lldb"
@@ -545,7 +545,7 @@
 				"program": "/Users/Shared/Epic Games/UE_5.4/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
 				"preLaunchTask": "WarriorEditor Mac Development Build",
 				"args": [
-					"/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject"
+					"/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject"
 				],
 				"cwd": "/Users/Shared/Epic Games/UE_5.4",
 				"type": "lldb"
@@ -559,7 +559,7 @@
 				"args": [
 					"-projectfiles",
 					"-vscode",
-					"-project=/Users/kim/Documents/GitHub/kht9544/Warrior/Warrior/Warrior.uproject",
+					"-project=/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Warrior.uproject",
 					"-game",
 					"-engine",
 					"-dotnet"

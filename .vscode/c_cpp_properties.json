@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "WarriorEditor Editor Mac Development (Warrior)",
+            "compilerPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "compilerArgs": [
+                "-isysroot",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": [
+                "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior.json"
+            ]
+        },
+        {
+            "name": "Mac",
+            "compilerPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+            "compilerArgs": [
+                "-isysroot",
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": [
+                "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Default.json"
+            ]
+        }
+    ],
+    "version": 4
+}

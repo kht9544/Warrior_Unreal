@@ -11,7 +11,7 @@ class UInputAction;
 class UInputMappingContext;
 
 USTRUCT(BlueprintType)
-struct FWarriorInputAction
+struct FWarriorInputActionConfig
 {
 	GENERATED_USTRUCT_BODY()
 
@@ -21,6 +21,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UInputAction* InputAction;
+
+	bool IsValid() const
+	{
+		return InputTag.IsValid() && InputAction;
+	}
 
 };
 /**
@@ -35,10 +40,13 @@ public:
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite)
 	UInputMappingContext* DefaultMappingContext;
 
-	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,meta = (TitleProperty= "InputActions"))
-	TArray<FWarriorInputAction> NativeInputActions;
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,meta = (TitleProperty= "InputTags"))
+	TArray<FWarriorInputActionConfig> NativeInputActions;
 
 	UInputAction* FindNativeInputAction(const FGameplayTag& InputTag) const;
+
+	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite,meta = (TitleProperty= "InputTags"))
+	TArray<FWarriorInputActionConfig> AbilityInputActions;
 	
 };
 
