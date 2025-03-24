@@ -24,7 +24,7 @@ AWarriorHeroController* UWarriorHeroGameplayAbility::GetHeroComtrollerFromActorI
 	return CachedWarriorHeroController.IsValid() ? CachedWarriorHeroController.Get() : nullptr;	
 }
 
-UHeroCombatComponent* UWarriorHeroGameplayAbility::GetHeroCombotComponentFromActorInfo()
+UHeroCombatComponent* UWarriorHeroGameplayAbility::GetHeroCombatComponentFromActorInfo()
 {
 	return GetHeroCharacteFromActorInfo()->GetHeroCombatComponent();
 }

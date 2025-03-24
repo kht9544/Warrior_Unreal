@@ -26,7 +26,7 @@ public:
 	AWarriorHeroController* GetHeroComtrollerFromActorInfo();
 
 	UFUNCTION(BlueprintPure,Category = "WarriorAbility")
-	UHeroCombatComponent* GetHeroCombotComponentFromActorInfo();
+	UHeroCombatComponent* GetHeroCombatComponentFromActorInfo();
 
 
 private:
