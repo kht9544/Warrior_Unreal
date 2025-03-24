@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "AnimInstances/WarriorBaseAnimInstance.h"
+#include "AnimInstances/Hero/WarriorHeroAnimInstance.h"
 #include "WarriorHeroLinkedAnimLayer.generated.h"
 
-class UWarriorHeroAnimInstance;
 /**
  * 
  */

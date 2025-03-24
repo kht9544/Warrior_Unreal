@@ -8,20 +8,34 @@
 
 AWarriorHeroCharacter* UWarriorHeroGameplayAbility::GetHeroCharacteFromActorInfo()
 {
-    if(!CachedWarriorHeroCharacter.IsValid())
-    {
-        CachedWarriorHeroCharacter = Cast<AWarriorHeroCharacter>(CurrentActorInfo->AvatarActor);
-    }
-	return CachedWarriorHeroCharacter.IsValid() ? CachedWarriorHeroCharacter.Get() : nullptr;
+    if (!CachedWarriorHeroCharacter.IsValid())
+	{
+		CachedWarriorHeroCharacter = Cast<AWarriorHeroCharacter>(CurrentActorInfo->AvatarActor);
+	}
+   
+    return CachedWarriorHeroCharacter.IsValid()? CachedWarriorHeroCharacter.Get() : nullptr;
 }
 
-AWarriorHeroController* UWarriorHeroGameplayAbility::GetHeroComtrollerFromActorInfo()
+AWarriorHeroController* UWarriorHeroGameplayAbility::GetHeroControllerFromActorInfo()
 {
-    if(!CachedWarriorHeroController.IsValid())
+    if (!CachedWarriorHeroController.IsValid())
+	{
+        UE_LOG(LogTemp,Warning,TEXT("Controller not valid"));
+		CachedWarriorHeroController = Cast<AWarriorHeroController>(CurrentActorInfo->PlayerController);
+	}
+    
+    if(CachedWarriorHeroController.IsValid())
     {
-        CachedWarriorHeroController = Cast<AWarriorHeroController>(CurrentActorInfo->AvatarActor);
+        UE_LOG(LogTemp,Warning,TEXT("Controller valid"));
+        return CachedWarriorHeroController.Get();
+
     }
-	return CachedWarriorHeroController.IsValid() ? CachedWarriorHeroController.Get() : nullptr;	
+    else
+    {
+        UE_LOG(LogTemp,Warning,TEXT("Controller nullptr"));
+        return nullptr;
+    }
+
 }
 
 UHeroCombatComponent* UWarriorHeroGameplayAbility::GetHeroCombatComponentFromActorInfo()

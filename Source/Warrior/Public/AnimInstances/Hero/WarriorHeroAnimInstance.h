@@ -32,6 +32,7 @@ protected:
 
 	float IdleElpasedTime;
 	
+	
 };
 
 
