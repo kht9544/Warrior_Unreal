@@ -20,22 +20,10 @@ AWarriorHeroController* UWarriorHeroGameplayAbility::GetHeroControllerFromActorI
 {
     if (!CachedWarriorHeroController.IsValid())
 	{
-        UE_LOG(LogTemp,Warning,TEXT("Controller not valid"));
 		CachedWarriorHeroController = Cast<AWarriorHeroController>(CurrentActorInfo->PlayerController);
 	}
     
-    if(CachedWarriorHeroController.IsValid())
-    {
-        UE_LOG(LogTemp,Warning,TEXT("Controller valid"));
-        return CachedWarriorHeroController.Get();
-
-    }
-    else
-    {
-        UE_LOG(LogTemp,Warning,TEXT("Controller nullptr"));
-        return nullptr;
-    }
-
+    return CachedWarriorHeroController.IsValid()? CachedWarriorHeroController.Get() : nullptr;
 }
 
 UHeroCombatComponent* UWarriorHeroGameplayAbility::GetHeroCombatComponentFromActorInfo()
