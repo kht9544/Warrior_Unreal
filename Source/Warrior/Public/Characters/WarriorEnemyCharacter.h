@@ -19,6 +19,8 @@ class WARRIOR_API AWarriorEnemyCharacter : public AWarriorBaseCharacter
 public:
 	AWarriorEnemyCharacter();
 
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+
 protected:
 	virtual void PossessedBy(AController *NewController) override;
 	
@@ -31,5 +33,9 @@ private:
 public:
 	FORCEINLINE UEnemyCombatComponent *GetEnemyCombatComponent() const { return EnemyCombatComponent; }
 };
+
+
+
+
 
 

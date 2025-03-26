@@ -1,20 +1,18 @@
 
+
+
+
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "WarriorTypes/WarriorEnumTypes.h"
 #include "WarriorFunctionLibrary.generated.h"
 
 class UWarriorAbilitySystemComponent;
-
-UENUM()
-enum class EWarriorConfirmType : uint8
-{
-	Yes,
-	No
-};
+class UPawnCombatComponent;
 
 /**
  *
@@ -39,4 +37,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (DisplayName = "DoesActorHaveTag", ExpandEnumAsExecs = "OutConfirmType"))
 	static void BP_DoesActorHaveTag(AActor *InActor, FGameplayTag TagToCheck, EWarriorConfirmType &OutConfirmType);
+
+	static UPawnCombatComponent *NativeGetPawnCombatComponentFormActor(AActor *InActor);
+
+	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (DisplayName = "GetPawnCombatComponentFormActor", ExpandEnumAsExecs = "OutValidType"))
+	static UPawnCombatComponent* BP_GetPawnCombatComponentFormActor(AActor *InActor, EWarriorValidType &OutValidType); 
 };
