@@ -2,6 +2,9 @@
 
 
 #include "AbilitySystem/WarriorAttributeSet.h"
+#include "GameplayEffectExtension.h"
+
+#include "WarriorDebugHelper.h"
 
 UWarriorAttributeSet::UWarriorAttributeSet()
 {
@@ -12,3 +15,41 @@ UWarriorAttributeSet::UWarriorAttributeSet()
     InitAttackPower(1.f);
     InitDefensePower(1.f);
 }
+
+void UWarriorAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data)
+{
+    if(Data.EvaluatedData.Attribute == GetCurrentHealthAttribute())
+    {
+       const float CurrentHealthValue = FMath::Clamp(GetCurrentHealth(),0.f, GetMaxHealth());
+       SetCurrentHealth(CurrentHealthValue);
+    }
+
+    if(Data.EvaluatedData.Attribute == GetCurrentRageAttribute())
+    {
+        const float CurrentRageValue = FMath::Clamp(GetCurrentRage(),0.f, GetMaxRage());
+        SetCurrentRage(CurrentRageValue);
+    }
+
+    if(Data.EvaluatedData.Attribute == GetDamageTakenAttribute())
+    {
+        const float OldHealth = GetCurrentHealth();
+        const float DamageDone = GetDamageTaken();
+
+        const float NewCurrentHealth = FMath::Clamp(OldHealth - DamageDone,0.f, GetMaxHealth());
+
+        SetCurrentHealth(NewCurrentHealth);
+
+        if(NewCurrentHealth <= 0.f)
+        {
+            //Debug::Print(TEXT("Player Dead"));
+            //GetAbilitySystemComponent()->GetGameplayAbilitySpec();
+            //GetAbilitySystemComponent()->GetGameplayAbilitySpec();
+            //GetAbilitySystemComponent()->GetGameplayAbilitySpec();
+        }
+    }
+    
+    
+
+	
+}
+

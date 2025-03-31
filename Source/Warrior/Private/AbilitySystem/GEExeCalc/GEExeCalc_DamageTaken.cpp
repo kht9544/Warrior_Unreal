@@ -45,6 +45,8 @@ UGEExeCalc_DamageTaken::UGEExeCalc_DamageTaken()
 
     RelevantAttributesToCapture.Add(GetWarriorDamageCapture().AttackPowerDef);
     RelevantAttributesToCapture.Add(GetWarriorDamageCapture().DefensePowerDef);
+    RelevantAttributesToCapture.Add(GetWarriorDamageCapture().DamageTakenDef);
+    
 
 }
 
@@ -75,18 +77,18 @@ void UGEExeCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustomE
         if(TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Shared_SetByCaller_BaseDamage))
         {
            BaseDamage = TagMagnitude.Value;
-           Debug::Print(TEXT("BaseDamage"), BaseDamage );
+           //Debug::Print(TEXT("BaseDamage"), BaseDamage );
         }
         if(TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Player_SetByCaller_AttackType_Light))
         {
             UsedLightAttackComboCount = TagMagnitude.Value;
-            Debug::Print(TEXT("UsedLightAttackComboCount"), UsedLightAttackComboCount);
+            //Debug::Print(TEXT("UsedLightAttackComboCount"), UsedLightAttackComboCount);
         }
 
         if(TagMagnitude.Key.MatchesTagExact(WarriorGameplayTags::Player_SetByCaller_AttackType_Heavy))
         {
             UsedHeavyAttackComboCount = TagMagnitude.Value;
-            Debug::Print(TEXT("UsedHeavyAttackComboCount "), UsedHeavyAttackComboCount );
+            //Debug::Print(TEXT("UsedHeavyAttackComboCount "), UsedHeavyAttackComboCount );
         }
     }
 
@@ -98,18 +100,18 @@ void UGEExeCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustomE
     {
         const float DamageIncreasePercnetLight = (UsedLightAttackComboCount - 1) * 0.05f + 1.f;
         BaseDamage *= DamageIncreasePercnetLight;
-        Debug::Print(TEXT("ScaledBaseDamageLight"), BaseDamage);
+       // Debug::Print(TEXT("ScaledBaseDamageLight"), BaseDamage);
     }
 
     if(UsedHeavyAttackComboCount != 0)
     {
         const float DamageIncreasePercnetHeavy = UsedHeavyAttackComboCount * 0.15f + 1.f;
         BaseDamage *= DamageIncreasePercnetHeavy;
-        Debug::Print(TEXT("ScaledBaseDamageHeavy"), BaseDamage );
+        //Debug::Print(TEXT("ScaledBaseDamageHeavy"), BaseDamage );
     }
 
     const float FinalDamageDone = BaseDamage * SourceAttackPower / TargetDefensePower;
-    Debug::Print(TEXT("FinalDamageDone"), FinalDamageDone);
+    //Debug::Print(TEXT("FinalDamageDone"), FinalDamageDone);
 
     if(FinalDamageDone > 0.f)
     {
