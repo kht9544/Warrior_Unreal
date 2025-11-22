@@ -44,6 +44,11 @@ class AWarriorCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* ClimbAction;
+
+	
+
 public:
 	AWarriorCharacter();
 	
@@ -55,6 +60,10 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
+
+	void OnClimbActionStarted(const FInputActionValue& Value);
+	
+	void OnClimbActionStopped(const FInputActionValue& Value);
 			
 
 protected:

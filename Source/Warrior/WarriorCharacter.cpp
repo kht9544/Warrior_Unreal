@@ -86,6 +86,10 @@ void AWarriorCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AWarriorCharacter::Look);
+
+		// Climbing
+		EnhancedInputComponent->BindAction(ClimbAction, ETriggerEvent::Started, this, &AWarriorCharacter::OnClimbActionStarted);
+		EnhancedInputComponent->BindAction(ClimbAction, ETriggerEvent::Completed, this, &AWarriorCharacter::OnClimbActionStopped);
 	}
 	else
 	{
@@ -124,7 +128,22 @@ void AWarriorCharacter::Look(const FInputActionValue& Value)
 	if (Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
+		UE_LOG(LogTemplateCharacter, Log, TEXT("LookAxisVector: %s"), *LookAxisVector.ToString());
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AWarriorCharacter::OnClimbActionStarted(const FInputActionValue& Value)
+{
+	UE_LOG(LogTemp,Warning,TEXT("OnClimbActionStarted called with value: %s"), *Value.ToString());
+
+	UE_LOG(LogTemplateCharacter, Log, TEXT("Climb action started"));
+}
+
+void AWarriorCharacter::OnClimbActionStopped(const FInputActionValue& Value)
+{
+	// Handle the stop of the climb action
+	UE_LOG(LogTemplateCharacter, Log, TEXT("Climb action stopped"));
+	// Implement logic to stop climbing here
 }
