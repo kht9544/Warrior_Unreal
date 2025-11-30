@@ -48,6 +48,7 @@ protected:
 	TArray<AActor*> OverlappedActors;
 
 private:
+	UPROPERTY()
 	TMap<FGameplayTag, AWarriorWeaponBase*> CharacterCarriedWeaponMap;
 
 
