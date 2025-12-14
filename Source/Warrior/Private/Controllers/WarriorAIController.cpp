@@ -5,6 +5,7 @@
 #include "Navigation/CrowdFollowingComponent.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
+#include "BehaviorTree/BlackboardComponent.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -29,9 +30,64 @@ AWarriorAIController::AWarriorAIController(const FObjectInitializer& ObjectIniti
     EnemyPerceptionComponent->SetDominantSense(UAISenseConfig_Sight::StaticClass());
     EnemyPerceptionComponent->OnTargetPerceptionUpdated.AddUniqueDynamic(this, &AWarriorAIController::OnEnemyPerceptionUpdated);
 
+    SetGenericTeamId(FGenericTeamId(1));
 }
+
+void AWarriorAIController::BeginPlay()
+{
+    Super::BeginPlay();
+
+    if(UCrowdFollowingComponent* CrowdComp = Cast<UCrowdFollowingComponent>(GetPathFollowingComponent()))
+    {
+        CrowdComp->SetCrowdSimulationState(bEnableDetourCrowdAvoidance? ECrowdSimulationState::Enabled : ECrowdSimulationState::Disabled);
+
+        switch(DetourCrowdAvoidanceQuality)
+        {
+            case 1:
+                CrowdComp->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::Low);
+                break;
+            case 2:
+                CrowdComp->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::Medium);
+                break;
+            case 3:
+                CrowdComp->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::Good);
+                break;
+            case 4:
+                CrowdComp->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::High);
+                break;            
+            default:
+                break;
+        }
+
+        CrowdComp->SetAvoidanceGroup(1);
+        CrowdComp->SetGroupsToAvoid(1);
+        CrowdComp->SetCrowdCollisionQueryRange(CollisionQueryRange);
+    }
+}
+
+ETeamAttitude::Type AWarriorAIController::GetTeamAttitudeTowards(const AActor& Other) const
+{
+    const APawn* PawnToCheck = Cast<const APawn>(&Other);
+
+    const IGenericTeamAgentInterface* OtherTeamAgent = Cast<const IGenericTeamAgentInterface>(PawnToCheck->GetController());
+
+    if(OtherTeamAgent && OtherTeamAgent->GetGenericTeamId() != GetGenericTeamId())
+    {
+        return ETeamAttitude::Hostile;
+    }
+
+    return ETeamAttitude::Friendly;
+}
+
 
 void AWarriorAIController::OnEnemyPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
-	
+    if(Stimulus.WasSuccessfullySensed() && Actor)
+    {
+        if(UBlackboardComponent* BlackboardComponent = GetBlackboardComponent())
+        {
+            BlackboardComponent->SetValueAsObject(TEXT("TargetActor"), Actor);
+        }
+    }
+    
 }
