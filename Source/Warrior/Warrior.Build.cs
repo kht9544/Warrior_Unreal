@@ -16,6 +16,7 @@ public class Warrior : ModuleRules
 			"InputCore", 
 			"EnhancedInput",
 			"GameplayTags",
-			"GameplayTasks"});
+			"GameplayTasks",
+			"AnimGraphRuntime"});
 	}
 }

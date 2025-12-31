@@ -27,12 +27,14 @@ protected:
 	UPROPERTY()
 	UCharacterMovementComponent* OwningMovementComponent;
 
-	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="AnimData|LocomotionData")
+	UPROPERTY(VisibleDefaultsOnly,BlueprintReadOnly,Category="AnimData|LocomotionData")
 	float GroundSpeed;
 
-	UPROPERTY(EditAnywhere,BlueprintReadOnly,Category="AnimData|LocomotionData")
+	UPROPERTY(VisibleDefaultsOnly,BlueprintReadOnly,Category="AnimData|LocomotionData")
 	bool bHasAcceleration;
 
+	UPROPERTY(VisibleDefaultsOnly,BlueprintReadOnly,Category="AnimData|LocomotionData")
+	float LocomotionDirection;
 
 };
 

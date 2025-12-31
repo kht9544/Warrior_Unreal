@@ -1,5 +1,21 @@
 [
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/AI/BTService_OrientToTargetActor.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/AbilitySystem/Abilites/WarriorEnemyGameplayAbility.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/AbilitySystem/Abilites/WarriorGameplayAbility.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -9,6 +25,14 @@
 	},
 	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/AbilitySystem/Abilites/WarriorHeroGameplayAbility.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/AbilitySystem/GEExeCalc/GEExeCalc_DamageTaken.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
@@ -64,6 +88,22 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Characters/WarriorEnemyCharacter.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Components/Combat/EnemyCombatComponent.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Components/Combat/HeroCombatComponent.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -96,6 +136,38 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Components/UI/EnemyUIComponent.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Components/UI/HeroUIComponent.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Components/UI/PawnUIComponent.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Controllers/WarriorAIController.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Controllers/WarriorHeroController.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -105,6 +177,14 @@
 	},
 	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/DataAssets/Input/DataAsset_InputConfig.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/DataAssets/StartUpData/DataAsset_EnemyStartUpData.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
@@ -128,6 +208,38 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Interfaces/PawnCombatInterface.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Interfaces/PawnUIInterface.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/WarriorFunctionLibrary.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/WarriorTypes/WarriorStructTypes.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Weapons/WarriorHeroWeapon.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -144,6 +256,30 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Private/Widgets/WarriorWidgetBase.cpp",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/AI/BTService_OrientToTargetActor.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/AbilitySystem/Abilites/WarriorEnemyGameplayAbility.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/AbilitySystem/Abilites/WarriorGameplayAbility.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -153,6 +289,14 @@
 	},
 	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/AbilitySystem/Abilites/WarriorHeroGameplayAbility.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/AbilitySystem/GEExeCalc/GEExeCalc_DamageTaken.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
@@ -224,6 +368,14 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Characters/WarriorEnemyCharacter.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Characters/WarriorHeroCharacter.cpp",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -233,6 +385,14 @@
 	},
 	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Characters/WarriorHeroCharacter.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Components/Combat/EnemyCombatComponent.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
@@ -272,6 +432,38 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Components/UI/EnemyUIComponent.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Components/UI/HeroUIComponent.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Components/UI/PawnUIComponent.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Controllers/WarriorAIController.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Controllers/WarriorHeroController.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -281,6 +473,14 @@
 	},
 	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/DataAssets/Input/DataAsset_InputConfig.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/DataAssets/StartUpData/DataAsset_EnemyStartUpData.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
@@ -320,7 +520,31 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Interfaces/PawnCombatInterface.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Interfaces/PawnUIInterface.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/WarriorDebugHelper.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/WarriorFunctionLibrary.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
@@ -344,6 +568,22 @@
 		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
 	},
 	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/WarriorTypes/WarriorEnumTypes.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/WarriorTypes/WarriorStructTypes.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Weapons/WarriorHeroWeapon.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
@@ -353,6 +593,14 @@
 	},
 	{
 		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Weapons/WarriorWeaponBase.h",
+		"arguments": [
+			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
+		],
+		"directory": "/Users/Shared/Epic Games/UE_5.4/Engine/Source"
+	},
+	{
+		"file": "/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/Source/Warrior/Public/Widgets/WarriorWidgetBase.h",
 		"arguments": [
 			"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
 			"@/Users/kim/Documents/GitHub/kht9544/Warrior_Unreal/.vscode/compileCommands_Warrior/Warrior.1.rsp"
