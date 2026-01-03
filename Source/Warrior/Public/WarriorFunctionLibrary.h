@@ -1,7 +1,4 @@
 
-
-
-
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
@@ -42,4 +39,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (DisplayName = "GetPawnCombatComponentFormActor", ExpandEnumAsExecs = "OutValidType"))
 	static UPawnCombatComponent* BP_GetPawnCombatComponentFormActor(AActor *InActor, EWarriorValidType &OutValidType); 
+
+	UFUNCTION(BlueprintPure, Category = "Warrior|FunctionLibrary")
+	static bool IsTargetPawnHostile(APawn* QueryPawn, APawn* TargetPawn);
+
 };

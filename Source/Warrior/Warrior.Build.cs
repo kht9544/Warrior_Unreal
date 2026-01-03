@@ -13,10 +13,14 @@ public class Warrior : ModuleRules
 			"Core", 
 			"CoreUObject", 
 			"Engine", 
-			"InputCore", 
-			"EnhancedInput",
-			"GameplayTags",
-			"GameplayTasks",
-			"AnimGraphRuntime"});
+			"InputCore",
+            "GameplayTags",
+            "EnhancedInput",
+            "GameplayTasks",
+            "AnimGraphRuntime",
+            "MotionWarping",
+            "Niagara",
+            "NavigationSystem",
+            "MoviePlayer"});
 	}
 }
