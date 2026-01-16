@@ -12,6 +12,7 @@
 class UWarriorAbilitySystemComponent;
 class UWarriorAttributeSet;
 class UDataAsset_StartUpDataBase;
+class UMotionWarpingComponent;
 
 UCLASS()
 class WARRIOR_API AWarriorBaseCharacter : public ACharacter, public IAbilitySystemInterface, public IPawnCombatInterface, public IPawnUIInterface
@@ -40,6 +41,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData")
 	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData")
+	UMotionWarpingComponent* MotionWarpingComponent;
 
 
 	// Synchronous Load(동기): 스레드를 차단(로딩 될 때까지 정지) / 로딩 중인 객체를 바로 검색 가능
