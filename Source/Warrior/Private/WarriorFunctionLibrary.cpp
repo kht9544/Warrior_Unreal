@@ -9,6 +9,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "WarriorGameplayTags.h"
 
+#include "WarriorDebugHelper.h"
 
 UWarriorAbilitySystemComponent* UWarriorFunctionLibrary::NativeGetWarriorASCFromActor(AActor* InActor)
 {
@@ -27,7 +28,7 @@ void UWarriorFunctionLibrary::AddGameplayTagToActorIfNone(AActor* InActor,FGamep
 
 }
 
-void UWarriorFunctionLibrary::RemoveGameplayFromActorIfFound(AActor* InActor,FGameplayTag TagToRemove)
+void UWarriorFunctionLibrary::RemoveGameplayTagFromActorIfFound(AActor* InActor,FGameplayTag TagToRemove)
 {
 	UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
     
@@ -131,3 +132,18 @@ FGameplayTag UWarriorFunctionLibrary::ComputeHitReactDirectionTag(AActor* InAtta
     return WarriorGameplayTags::Shared_Status_HitReact_Front;
 }
 
+
+bool UWarriorFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefender)
+{
+    if(!InAttacker || !InDefender)
+    {
+        return false;
+    }
+
+    const float DotResult = FVector::DotProduct(InAttacker->GetActorForwardVector(), InDefender->GetActorForwardVector());
+
+    // const FString DebugString = FString::Printf(TEXT("Dot Result : %f %s"), DotResult,DotResult < 0.f ? TEXT("Blocked") : TEXT("Not Blocked"));
+
+    // Debug::Print(DebugString,DotResult < 0.1f ? FColor::Green : FColor::Red);
+    return DotResult < 0.1f;
+}
