@@ -36,10 +36,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (DisplayName = "DoesActorHaveTag", ExpandEnumAsExecs = "OutConfirmType"))
 	static void BP_DoesActorHaveTag(AActor *InActor, FGameplayTag TagToCheck, EWarriorConfirmType &OutConfirmType);
 
-	static UPawnCombatComponent *NativeGetPawnCombatComponentFormActor(AActor *InActor);
+	static UPawnCombatComponent *NativeGetPawnCombatComponentFromActor(AActor *InActor);
 
-	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (DisplayName = "GetPawnCombatComponentFormActor", ExpandEnumAsExecs = "OutValidType"))
-	static UPawnCombatComponent* BP_GetPawnCombatComponentFormActor(AActor *InActor, EWarriorValidType &OutValidType); 
+	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (DisplayName = "GetPawnCombatComponentFromActor", ExpandEnumAsExecs = "OutValidType"))
+	static UPawnCombatComponent* BP_GetPawnCombatComponentFromActor(AActor *InActor, EWarriorValidType &OutValidType); 
 
 	UFUNCTION(BlueprintPure, Category = "Warrior|FunctionLibrary")
 	static bool IsTargetPawnHostile(APawn* QueryPawn, APawn* TargetPawn);

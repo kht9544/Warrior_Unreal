@@ -13,91 +13,91 @@
 
 UWarriorAbilitySystemComponent* UWarriorFunctionLibrary::NativeGetWarriorASCFromActor(AActor* InActor)
 {
-    check(InActor);
+    if (!IsValid(InActor)) return nullptr;
 
-    return CastChecked<UWarriorAbilitySystemComponent>(UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(InActor));
+    UAbilitySystemComponent* ASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(InActor);
+    if (!IsValid(ASC)) return nullptr;
+
+    return Cast<UWarriorAbilitySystemComponent>(ASC);
 }
 
-void UWarriorFunctionLibrary::AddGameplayTagToActorIfNone(AActor* InActor,FGameplayTag TagToAdd)
+void UWarriorFunctionLibrary::AddGameplayTagToActorIfNone(AActor* InActor, FGameplayTag TagToAdd)
 {
-	UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
-    if(!ASC->HasMatchingGameplayTag(TagToAdd))
+    UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
+    if (!ASC || !TagToAdd.IsValid()) return;
+
+    if (!ASC->HasMatchingGameplayTag(TagToAdd))
     {
         ASC->AddLooseGameplayTag(TagToAdd);
     }
-
 }
 
-void UWarriorFunctionLibrary::RemoveGameplayTagFromActorIfFound(AActor* InActor,FGameplayTag TagToRemove)
+void UWarriorFunctionLibrary::RemoveGameplayTagFromActorIfFound(AActor* InActor, FGameplayTag TagToRemove)
 {
-	UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
-    
-    if(ASC->HasMatchingGameplayTag(TagToRemove))
+    UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
+    if (!ASC || !TagToRemove.IsValid()) return;
+
+    if (ASC->HasMatchingGameplayTag(TagToRemove))
     {
         ASC->RemoveLooseGameplayTag(TagToRemove);
     }
 }
 
-bool UWarriorFunctionLibrary::NativeDoesActorHaveTag(AActor* InActor,FGameplayTag TagToCheck)
+bool UWarriorFunctionLibrary::NativeDoesActorHaveTag(AActor* InActor, FGameplayTag TagToCheck)
 {
-	UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
+    UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
+    if (!ASC || !TagToCheck.IsValid()) return false;
+
     return ASC->HasMatchingGameplayTag(TagToCheck);
 }
 
-void UWarriorFunctionLibrary::BP_DoesActorHaveTag(AActor* InActor,FGameplayTag TagToCheck,EWarriorConfirmType& OutConfirmType)
+void UWarriorFunctionLibrary::BP_DoesActorHaveTag(AActor* InActor, FGameplayTag TagToCheck, EWarriorConfirmType& OutConfirmType)
 {
-	OutConfirmType = NativeDoesActorHaveTag(InActor,TagToCheck) ? EWarriorConfirmType::Yes : EWarriorConfirmType::No;
+    OutConfirmType = NativeDoesActorHaveTag(InActor, TagToCheck) ? EWarriorConfirmType::Yes : EWarriorConfirmType::No;
 }
 
-UPawnCombatComponent* UWarriorFunctionLibrary::NativeGetPawnCombatComponentFormActor(AActor *InActor)
+UPawnCombatComponent* UWarriorFunctionLibrary::NativeGetPawnCombatComponentFromActor(AActor* InActor)
 {
-	check(InActor);
+    if (!IsValid(InActor)) return nullptr;
 
-    if(IPawnCombatInterface* PawnCombatInterface = Cast<IPawnCombatInterface>(InActor))
+    if (IPawnCombatInterface* PawnCombatInterface = Cast<IPawnCombatInterface>(InActor))
     {
-       return  PawnCombatInterface->GetPawnCombatComponent();
+        return PawnCombatInterface->GetPawnCombatComponent();
     }
 
     return nullptr;
-
 }
 
-UPawnCombatComponent* UWarriorFunctionLibrary::BP_GetPawnCombatComponentFormActor(AActor *InActor, EWarriorValidType &OutValidType)
+UPawnCombatComponent* UWarriorFunctionLibrary::BP_GetPawnCombatComponentFromActor(AActor* InActor, EWarriorValidType& OutValidType)
 {
-	UPawnCombatComponent* CombatComponent =  NativeGetPawnCombatComponentFormActor(InActor);
-
+    UPawnCombatComponent* CombatComponent = NativeGetPawnCombatComponentFromActor(InActor);
     OutValidType = CombatComponent ? EWarriorValidType::Valid : EWarriorValidType::Invalid;
-
     return CombatComponent;
-    
-
 }
-
 
 bool UWarriorFunctionLibrary::IsTargetPawnHostile(APawn* QueryPawn, APawn* TargetPawn)
 {
-    check(QueryPawn || TargetPawn);
+    if (!IsValid(QueryPawn) || !IsValid(TargetPawn)) return false;
 
     IGenericTeamAgentInterface* QueryTeamAgent = Cast<IGenericTeamAgentInterface>(QueryPawn->GetController());
     IGenericTeamAgentInterface* TargetTeamAgent = Cast<IGenericTeamAgentInterface>(TargetPawn->GetController());
 
-    if(QueryTeamAgent && TargetTeamAgent)
+    if (QueryTeamAgent && TargetTeamAgent)
     {
         return QueryTeamAgent->GetGenericTeamId() != TargetTeamAgent->GetGenericTeamId();
     }
 
     return false;
-
 }
 
 float UWarriorFunctionLibrary::GetScalableFloatValueAtLevel(const FScalableFloat& InScalableFloat, float InLevel)
 {
-	return InScalableFloat.GetValueAtLevel(InLevel);
+    return InScalableFloat.GetValueAtLevel(InLevel);
 }
 
 FGameplayTag UWarriorFunctionLibrary::ComputeHitReactDirectionTag(AActor* InAttacker, AActor* InVictim, float& OutAngleDifference)
 {
-	check(InAttacker && InVictim);
+    check(InAttacker && InVictim);
 
     const FVector VictimForward = InVictim->GetActorForwardVector();
     const FVector VictimToAttackerNormalized = (InAttacker->GetActorLocation() - InVictim->GetActorLocation()).GetSafeNormal();
@@ -107,43 +107,35 @@ FGameplayTag UWarriorFunctionLibrary::ComputeHitReactDirectionTag(AActor* InAtta
 
     const FVector CrossResult = FVector::CrossProduct(VictimForward, VictimToAttackerNormalized);
 
-    if(CrossResult.Z < 0.f)
+    if (CrossResult.Z < 0.f)
     {
         OutAngleDifference *= -1.f;
     }
 
-    if(OutAngleDifference >= -45.f && OutAngleDifference < 45.f)
+    if (OutAngleDifference >= -45.f && OutAngleDifference <= 45.f)
     {
         return WarriorGameplayTags::Shared_Status_HitReact_Front;
     }
-    else if(OutAngleDifference >= 45.f && OutAngleDifference < 135.f)
-    {
-        return WarriorGameplayTags::Shared_Status_HitReact_Right;
-    }
-    else if(OutAngleDifference >= -135.f && OutAngleDifference < -45.f)
+    else if (OutAngleDifference < -45.f && OutAngleDifference >= -135.f)
     {
         return WarriorGameplayTags::Shared_Status_HitReact_Left;
     }
-    else if(OutAngleDifference >= 135.f || OutAngleDifference < -135.f)
+    else if (OutAngleDifference < -135.f || OutAngleDifference > 135.f)
     {
         return WarriorGameplayTags::Shared_Status_HitReact_Back;
+    }
+    else if (OutAngleDifference > 45.f && OutAngleDifference <= 135.f)
+    {
+        return WarriorGameplayTags::Shared_Status_HitReact_Right;
     }
 
     return WarriorGameplayTags::Shared_Status_HitReact_Front;
 }
 
-
 bool UWarriorFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefender)
 {
-    if(!InAttacker || !InDefender)
-    {
-        return false;
-    }
+    check(InAttacker && InDefender);
 
     const float DotResult = FVector::DotProduct(InAttacker->GetActorForwardVector(), InDefender->GetActorForwardVector());
-
-    // const FString DebugString = FString::Printf(TEXT("Dot Result : %f %s"), DotResult,DotResult < 0.f ? TEXT("Blocked") : TEXT("Not Blocked"));
-
-    // Debug::Print(DebugString,DotResult < 0.1f ? FColor::Green : FColor::Red);
-    return DotResult < 0.1f;
+    return DotResult < -0.1f;
 }
