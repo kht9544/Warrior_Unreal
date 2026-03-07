@@ -24,3 +24,7 @@ void UDataAsset_EnemyStartUpData::GiveToAbilitySystemComponent(UWarriorAbilitySy
         }
     }
 }
+
+
+
+
