@@ -20,9 +20,9 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
     bool bIsValidBlock = false;
 
     const bool bIsPlayerBlocking = UWarriorFunctionLibrary::NativeDoesActorHaveTag(HitActor, WarriorGameplayTags::Player_Status_Blocking);
-    const bool bIsMyttackUnBlockable = false;
+    const bool bIsMyAttackUnBlockable = UWarriorFunctionLibrary::NativeDoesActorHaveTag(GetOwningPawn(), WarriorGameplayTags::Enemy_Status_Unblockable);
 
-    if(bIsPlayerBlocking && !bIsMyttackUnBlockable)
+    if(bIsPlayerBlocking && !bIsMyAttackUnBlockable)
     {
        bIsValidBlock = UWarriorFunctionLibrary::IsValidBlock(GetOwningPawn(), HitActor);
 
@@ -41,9 +41,8 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
     }
     else
     {
-        //TODO Play Normal Hit Reaction
         UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
-            GetOwner(), 
+            GetOwningPawn(), 
             WarriorGameplayTags::Shared_Event_MeleeHit, 
             EventData);
     }
