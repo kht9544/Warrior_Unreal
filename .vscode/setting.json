@@ -1,0 +1,5 @@
+{
+  "C_Cpp_Runner.sourceDirectory": "${workspaceFolder}/Source",
+  "cppHelper.sourceExtension": "cpp",
+  "cppHelper.cppPath": "${fileDirname}/../Private/${fileBasenameNoExtension}.cpp"
+}

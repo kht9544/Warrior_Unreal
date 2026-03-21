@@ -1,0 +1,4 @@
+CompileFlags:
+  Add:
+    - "-I./Source/Warrior/Public"
+    - "-xc++"
