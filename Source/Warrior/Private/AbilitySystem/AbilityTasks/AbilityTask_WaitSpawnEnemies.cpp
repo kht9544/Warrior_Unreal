@@ -92,7 +92,7 @@ void UAbilityTask_WaitSpawnEnemies::OnEnemyClassLoaded()
         const FRotator SpawnFacingRotation = AbilitySystemComponent->GetAvatarActor()->GetActorForwardVector().ToOrientationRotator();
 
         AWarriorEnemyCharacter* SpawnedEnemy = World->SpawnActor<AWarriorEnemyCharacter>(LoadedClass,RandomLocation,SpawnFacingRotation,SpawnParam);
-fㅇ
+
         if (SpawnedEnemy)
         {
             SpawnedEnemies.Add(SpawnedEnemy);
@@ -113,4 +113,3 @@ fㅇ
 
     EndTask();
 }
-
