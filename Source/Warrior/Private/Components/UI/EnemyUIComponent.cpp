@@ -6,6 +6,16 @@
 
 void UEnemyUIComponent::RegisterEnemyDrawnWidget(UWarriorWidgetBase* InWidgetToRegister)
 {
+	if (!InWidgetToRegister)
+	{
+		return;
+	}
+
+	constexpr int32 EnemyDrawnWidgetZOrder = -10;
+
+	InWidgetToRegister->RemoveFromParent();
+	InWidgetToRegister->AddToViewport(EnemyDrawnWidgetZOrder);
+
 	EnemyDrawnWidgets.Add(InWidgetToRegister);
 }
 
@@ -27,4 +37,3 @@ void UEnemyUIComponent::RemoveEnemyDrawnWidgetsIfAny()
     EnemyDrawnWidgets.Empty();
 
 }
-

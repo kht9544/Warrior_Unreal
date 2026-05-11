@@ -13,6 +13,9 @@ void UPawnCombatComponent::RegisterSpawnedWeapon(FGameplayTag InWeaponTagToRegis
 
     CharacterCarriedWeaponMap.Emplace(InWeaponTagToRegister,InWeaponToRegister);
 
+    InWeaponToRegister->SetOwner(GetOwningPawn());
+    InWeaponToRegister->SetInstigator(GetOwningPawn<APawn>());
+
     InWeaponToRegister->OnWeaponHitTarget.BindUObject(this,&UPawnCombatComponent::OnHitTargetActor);
     InWeaponToRegister->OnWeaponPulledFromTarget.BindUObject(this,&UPawnCombatComponent::OnWeaponPulledFromTargetActor);
 
@@ -68,6 +71,10 @@ void UPawnCombatComponent::ToggleCurrentEquippedWeaponCollision(bool bShouldEnab
        check(WeaponToToggle);
         if(bShouldEnable)
         {
+            WeaponToToggle->GetWeaponCollisionBox()->SetCollisionObjectType(ECC_WorldDynamic);
+            WeaponToToggle->GetWeaponCollisionBox()->SetCollisionResponseToAllChannels(ECR_Ignore);
+            WeaponToToggle->GetWeaponCollisionBox()->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+            WeaponToToggle->GetWeaponCollisionBox()->SetGenerateOverlapEvents(true);
             WeaponToToggle->GetWeaponCollisionBox()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
             
         }   

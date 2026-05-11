@@ -4,6 +4,7 @@
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
 #include "AbilitySystem/WarriorAttributeSet.h"
 #include "MotionWarpingComponent.h"
+#include "Components/CapsuleComponent.h"
 // Sets default values
 
 AWarriorBaseCharacter::AWarriorBaseCharacter()
@@ -13,6 +14,7 @@ AWarriorBaseCharacter::AWarriorBaseCharacter()
 	PrimaryActorTick.bStartWithTickEnabled = false;
 
 	GetMesh()->bReceivesDecals = false;
+	GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_WorldDynamic, ECR_Overlap);
 
 	WarriorAbilitySystemComponent = CreateDefaultSubobject<UWarriorAbilitySystemComponent>(TEXT("WarriorAbilitySystem"));
 
@@ -34,6 +36,13 @@ UPawnCombatComponent* AWarriorBaseCharacter::GetPawnCombatComponent() const
 UPawnUIComponent* AWarriorBaseCharacter::GetPawnUIComponent() const 
 {
 	return nullptr;
+}
+
+void AWarriorBaseCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_WorldDynamic, ECR_Overlap);
 }
 
 void AWarriorBaseCharacter::PossessedBy(AController *NewController)

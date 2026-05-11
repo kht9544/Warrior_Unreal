@@ -36,11 +36,19 @@ AWarriorEnemyCharacter::AWarriorEnemyCharacter()
     LeftHandCollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("LeftHandCollisionBox"));
     LeftHandCollisionBox->SetupAttachment(GetMesh());
     LeftHandCollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    LeftHandCollisionBox->SetCollisionObjectType(ECC_WorldDynamic);
+    LeftHandCollisionBox->SetCollisionResponseToAllChannels(ECR_Ignore);
+    LeftHandCollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+    LeftHandCollisionBox->SetGenerateOverlapEvents(true);
     LeftHandCollisionBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &ThisClass::OnBodyCollisionBoxBeginOverlap);
 
     RightHandCollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("RightHandCollisionBox"));
     RightHandCollisionBox->SetupAttachment(GetMesh());
     RightHandCollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    RightHandCollisionBox->SetCollisionObjectType(ECC_WorldDynamic);
+    RightHandCollisionBox->SetCollisionResponseToAllChannels(ECR_Ignore);
+    RightHandCollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+    RightHandCollisionBox->SetGenerateOverlapEvents(true);
     RightHandCollisionBox->OnComponentBeginOverlap.AddUniqueDynamic(this, &ThisClass::OnBodyCollisionBoxBeginOverlap);
 
 }

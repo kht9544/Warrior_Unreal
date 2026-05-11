@@ -66,6 +66,7 @@ void UGEExeCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustomE
 
     float SourceAttackPower = 0.f;
 	ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(GetWarriorDamageCapture().AttackPowerDef,EvaluationParameters, SourceAttackPower);
+    SourceAttackPower = FMath::Max(SourceAttackPower, 1.f);
 
     float BaseDamage = 0.f;
     int32 UsedLightAttackComboCount = 0;
@@ -94,6 +95,7 @@ void UGEExeCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustomE
 
     float TargetDefensePower = 0.f;
     ExecutionParams.AttemptCalculateCapturedAttributeMagnitude(GetWarriorDamageCapture().DefensePowerDef,EvaluationParameters, TargetDefensePower);
+    TargetDefensePower = FMath::Max(TargetDefensePower, 1.f);
 
     if(UsedLightAttackComboCount != 0)
     {

@@ -55,7 +55,10 @@ void UWarriorFunctionLibrary::BP_DoesActorHaveTag(AActor* InActor, FGameplayTag 
 
 UPawnCombatComponent* UWarriorFunctionLibrary::NativeGetPawnCombatComponentFromActor(AActor* InActor)
 {   
-    check(InActor);
+    if (!InActor)
+    {
+        return nullptr;
+    }
 
     if (IPawnCombatInterface* PawnCombatInterface = Cast<IPawnCombatInterface>(InActor))
     {
@@ -67,6 +70,12 @@ UPawnCombatComponent* UWarriorFunctionLibrary::NativeGetPawnCombatComponentFromA
 
 UPawnCombatComponent* UWarriorFunctionLibrary::BP_GetPawnCombatComponentFromActor(AActor* InActor, EWarriorValidType& OutValidType)
 {   
+    if (!InActor)
+    {
+        OutValidType = EWarriorValidType::Invalid;
+        return nullptr;
+    }
+
     UPawnCombatComponent* CombatComponent = NativeGetPawnCombatComponentFromActor(InActor);
 
     OutValidType = CombatComponent? EWarriorValidType::Valid : EWarriorValidType::Invalid;
@@ -146,6 +155,15 @@ bool UWarriorFunctionLibrary::IsValidBlock(AActor* InAttacker, AActor* InDefende
 
 bool UWarriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle)
 {   
+    if (!InInstigator || !InTargetActor || !InSpecHandle.IsValid())
+    {
+        UE_LOG(LogTemp, Warning, TEXT("ApplyGameplayEffectSpecHandleToTargetActor failed: Instigator=%s Target=%s SpecValid=%s"),
+            *GetNameSafe(InInstigator),
+            *GetNameSafe(InTargetActor),
+            InSpecHandle.IsValid() ? TEXT("true") : TEXT("false"));
+        return false;
+    }
+
     UWarriorAbilitySystemComponent* SourceASC = NativeGetWarriorASCFromActor(InInstigator);
     UWarriorAbilitySystemComponent* TargetASC = NativeGetWarriorASCFromActor(InTargetActor);
 

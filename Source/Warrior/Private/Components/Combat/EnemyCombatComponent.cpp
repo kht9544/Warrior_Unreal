@@ -63,12 +63,22 @@ void UEnemyCombatComponent::ToggleBodyCollisionBoxCollision(bool bShouldEnable, 
     
     check(LeftHandCollisionBox && RightHandCollisionBox);
 
+    auto PrepareCollisionBox = [](UBoxComponent* CollisionBox)
+    {
+        CollisionBox->SetCollisionObjectType(ECC_WorldDynamic);
+        CollisionBox->SetCollisionResponseToAllChannels(ECR_Ignore);
+        CollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+        CollisionBox->SetGenerateOverlapEvents(true);
+    };
+
     switch (ToggleDamageType)
     {
         case EToggleDamageType::LeftHand:
+            PrepareCollisionBox(LeftHandCollisionBox);
             LeftHandCollisionBox->SetCollisionEnabled(bShouldEnable ? ECollisionEnabled::QueryOnly : ECollisionEnabled::NoCollision);
             break;
         case EToggleDamageType::RightHand:
+            PrepareCollisionBox(RightHandCollisionBox);
             RightHandCollisionBox->SetCollisionEnabled(bShouldEnable ? ECollisionEnabled::QueryOnly : ECollisionEnabled::NoCollision);
             break;
         default:

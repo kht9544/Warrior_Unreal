@@ -15,11 +15,16 @@ AWarriorWeaponBase::AWarriorWeaponBase()
 
 	WeaponMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("WeaeponMesh"));
 	SetRootComponent(WeaponMesh);
+	WeaponMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	WeaponCollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("WeaeponCollisionBox"));
 	WeaponCollisionBox->SetupAttachment(GetRootComponent());
 	WeaponCollisionBox->SetBoxExtent(FVector(20.f));
 	WeaponCollisionBox->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	WeaponCollisionBox->SetCollisionObjectType(ECC_WorldDynamic);
+	WeaponCollisionBox->SetCollisionResponseToAllChannels(ECR_Ignore);
+	WeaponCollisionBox->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
+	WeaponCollisionBox->SetGenerateOverlapEvents(true);
 	WeaponCollisionBox->OnComponentBeginOverlap.AddDynamic(this, &AWarriorWeaponBase::OnCollisionBoxBeginOverlap);
 	WeaponCollisionBox->OnComponentEndOverlap.AddDynamic(this, &AWarriorWeaponBase::OnCollisionBoxEndOverlap);
 
@@ -53,5 +58,4 @@ void AWarriorWeaponBase::OnCollisionBoxEndOverlap(UPrimitiveComponent* Overlappe
 		}
 	}
 }
-
 
