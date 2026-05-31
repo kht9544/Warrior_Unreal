@@ -136,14 +136,14 @@ void AWarriorCharacter::Look(const FInputActionValue& Value)
 
 void AWarriorCharacter::OnClimbActionStarted(const FInputActionValue& Value)
 {
-	UE_LOG(LogTemp,Warning,TEXT("OnClimbActionStarted called with value: %s"), *Value.ToString());
-
-	UE_LOG(LogTemplateCharacter, Log, TEXT("Climb action started"));
+	// TODO : Climbing System    
+	//UE_LOG(LogTemp,Warning,TEXT("OnClimbActionStarted called with value: %s"), *Value.ToString());
 }
 
 void AWarriorCharacter::OnClimbActionStopped(const FInputActionValue& Value)
 {
+	// TODO : Climbing System    	
 	// Handle the stop of the climb action
-	UE_LOG(LogTemplateCharacter, Log, TEXT("Climb action stopped"));
+	//UE_LOG(LogTemplateCharacter, Log, TEXT("Climb action stopped"));
 	// Implement logic to stop climbing here
 }

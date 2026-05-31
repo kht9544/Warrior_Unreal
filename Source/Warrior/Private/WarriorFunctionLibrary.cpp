@@ -8,7 +8,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "WarriorGameplayTags.h"
 #include "WarriorTypes/WarriorCountDownAction.h"
-//#include "WarriorGameInstance.h"
+#include "WarriorGameInstance.h"
 #include "Kismet/GameplayStatics.h"
 //#include "SaveGame/WarriorSaveGame.h"
 
@@ -212,18 +212,18 @@ void UWarriorFunctionLibrary::CountDown(const UObject* WorldContextObject, float
     
 }
 
-// UWarriorGameInstance* UWarriorFunctionLibrary::GetWarriorGameInstance(const UObject* WorldContextObject)
-// {   
-//     if (GEngine)
-//     {
-//         if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
-//         {
-//             return World->GetGameInstance<UWarriorGameInstance>();
-//         }
-//     }
+UWarriorGameInstance* UWarriorFunctionLibrary::GetWarriorGameInstance(const UObject* WorldContextObject)
+{   
+    if (GEngine)
+    {
+        if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
+        {
+            return World->GetGameInstance<UWarriorGameInstance>();
+        }
+    }
 
-//     return nullptr;
-// }
+    return nullptr;
+}
 
 void UWarriorFunctionLibrary::ToggleInputMode(const UObject* WorldContextObject, EWarriorInputMode InInputMode)
 {
